@@ -1,0 +1,29 @@
+{
+  "name": "my-new-project",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^8.16.12",
+    "@wdio/cli": "^8.16.12",
+    "@wdio/cucumber-framework": "^8.16.12",
+    "@wdio/local-runner": "8.13.13",
+    "@wdio/spec-reporter": "^8.16.12",
+    "@wdio/visual-service": "^5.1.1",
+    "selenium-standalone": "^10.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2",
+    "wdio-chromedriver-service": "8.1.1",
+    "wdio-docker-service": "^3.2.1",
+    "wdio-html-nice-reporter": "8.1.6",
+    "webdriver-image-comparison": "^6.0.2"
+  },
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.ts",
+    "wdioDockerCompose": "wdio run ./docker.wdio.conf.ts",
+    "chrome": "set _BROWSER=chrome&&npm run wdio&&set _BROWSER=",
+    "edge": "set _BROWSER=edge&&npm run wdio&&set _BROWSER=",
+    "firefox": "set _BROWSER=firefox&&npm run wdio&&set _BROWSER="
+  },
+  "dependencies": {
+    "geckodriver": "^4.4.2"
+  }
+}
